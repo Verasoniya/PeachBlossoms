@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        "hammersmith-one": ["Hammersmith One", "sans-serif"],
+        "gill-sans-mt": ["Gill Sans MT", "sans-serif"],
       },
     },
   },

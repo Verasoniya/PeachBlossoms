@@ -4,8 +4,8 @@ import { FaLinkedin } from "react-icons/fa";
 
 function Footer() {
   return (
-    <div className="w-full flex justify-center py-4 gap-1 font-hammersmith-one bg-[#BD4B4B] text-[#FFF5E4]">
-      <p className="self-center text-lg">2022 | By Vera Soniya</p>
+    <div className="w-full flex justify-center py-4 gap-1 font-gill-sans-mt bg-[#BD4B4B] text-[#FFF5E4]">
+      <p className="self-center text-xl">2022 | By Vera Soniya</p>
       <a href="https://github.com/verasoniya" target="blank" className="self-center text-3xl">
         <FaGithubSquare />
       </a>
