@@ -2,14 +2,10 @@
 import "./App.css";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import Layout from "./components/Layout";
 
 function App() {
-  return (
-    <div>
-      <Header />
-      <Footer />
-    </div>
-  );
+  return <Layout></Layout>;
 }
 
 export default App;
