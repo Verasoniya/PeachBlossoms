@@ -6,7 +6,7 @@ function Header() {
       <div className="w-10/12 flex justify-between">
         <div className="w-1/2">
           <a href="#">
-            <img src="https://drive.google.com/uc?export=view&id=1-LEpywIunDku2bw8bLz5hwuxRpY0zRvV" width="235px" />
+            <img src="https://drive.google.com/uc?export=view&id=1vRodaitcfNx9ONx3GtKdsaS7xE2g-GUx" width="235px" />
           </a>
         </div>
         <div className="w-1/2 flex justify-between font-gill-sans-mt font-bold text-xl text-[#FFF5E4] self-center">
