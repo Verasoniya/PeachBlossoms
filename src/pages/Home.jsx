@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { FaSearch } from "react-icons/fa";
+import { FaArrowDown, FaSearch } from "react-icons/fa";
 import swal from "sweetalert";
 import CardProduct from "../components/CardProduct";
 import Layout from "../components/Layout";
@@ -8,7 +8,8 @@ import Layout from "../components/Layout";
 function Home() {
   const [loading, setLoading] = useState(true);
   const [makeup, setMakeup] = useState([]);
-  const [offset, setOffset] = useState(13);
+  const [brand, setBrand] = useState("");
+  const [page, setPage] = useState(13);
 
   useEffect(() => {
     fetchMakeupList();
@@ -18,12 +19,40 @@ function Home() {
     axios
       .get(`http://makeup-api.herokuapp.com/api/v1/products.json`)
       .then((res) => {
-        setMakeup(res.data);
+        setMakeup(res.data.slice(0, 12));
         console.log(res.data);
       })
       .catch((err) => swal("Error", err.toString(), "success"))
       .finally(() => setLoading(false));
   };
+
+  const fetchMoreMakeup = async () => {
+    let newPage = page + 12;
+    axios
+      .get(`http://makeup-api.herokuapp.com/api/v1/products.json`)
+      .then((res) => {
+        const { data } = res.data;
+        const temp = makeup.slice();
+        temp.push(...data);
+        setMakeup(temp);
+        setPage(newPage);
+      })
+      .catch((err) => swal("Error", err.toString(), "success"))
+      .finally(() => setLoading(false));
+  };
+
+  function handleSearch() {
+    setLoading(true);
+    axios
+      .get(`http://makeup-api.herokuapp.com/api/v1/products.json?brand=${brand}`)
+      .then((res) => {
+        setMakeup(res.data);
+        console.log(res);
+      })
+      .catch((err) => swal("Error", err.toString(), "success"))
+      .finally(() => setLoading(false));
+  }
+
   if (loading) {
     return (
       <div className="flex justify-center content-center">
@@ -35,10 +64,18 @@ function Home() {
   } else {
     return (
       <Layout>
-        <div className="w-full">
-          <div className="flex justify-center bg-[#FF9494]">
-            <div className="w-10/12 flex flex-col pt-5">
-              <input type="text" placeholder={`Search product or brand`} className="self-end placeholder:font-gill-sans-mt placeholder:italic placeholder:p-3 placeholder:text-right placeholder:text-sm placeholder:text-[#BD4B4B]" />
+        <div className="w-full flex flex-col items-center">
+          <div className="w-full flex justify-center bg-[#FF9494]">
+            <div className="w-full lg:w-10/12 flex pt-2 justify-center lg:justify-end">
+              <input
+                type="text"
+                placeholder={`Search brand`}
+                className="bg-[#FFF5E4] text-right font-gill-sans-mt py-1 pr-3 text-md text-[#FF9494] placeholder:font-gill-sans-mt placeholder:italic placeholder:py-1 placeholder:text-right placeholder:text-md placeholder:text-[#FF9494] focus:outline-none focus:ring-[#BD4B4B] focus:ring-2"
+                onChange={(e) => setBrand(e.target.value)}
+              />
+              <button className="px-3 ml-2 rounded-sm text-xl bg-[#BD4B4B] text-[#FFF5E4] hover:text-[#FF9494] hover:bg-[#FFF5E4] " onClick={(e) => handleSearch(e)}>
+                <FaSearch />
+              </button>
             </div>
           </div>
           <div className="flex justify-center bg-[#FF9494]">
@@ -59,12 +96,19 @@ function Home() {
           <div className="flex justify-center">
             <div className="w-10/12 flex flex-col justify-center items-center">
               <p className="py-20 font-gill-sans-mt font-bold text-4xl text-[#BD4B4B]">PRODUCTS LIST</p>
-              <div className="w-full mb-24 grid grid-flow-row auto-rows-max gap-6 my-8 mx-10 lg:mx-28 grid-cols-1 md:grid-cols-3 2xl:grid-cols-4 content-center">
+              <div className="w-full mb-24 grid grid-flow-row auto-rows-max gap-6 my-8 mx-10 lg:mx-28 grid-cols-1 md:grid-cols-4 2xl:grid-cols-6 content-center">
                 {makeup.map((item) => (
                   <CardProduct key={item.id} productImage={item.image_link} productName={item.name} productBrand={item.brand} productPrice={item.price} productCategory={item.category} />
                 ))}
               </div>
             </div>
+          </div>
+          <div className="w-10/12 flex justify-center pt-0 lg:pt-4 pb-16">
+            <hr className="self-center w-full border-b border-[#BD4B4B]" />
+            <button className="p-4 lg:p-6 mx-2 lg:mx-6 text-base lg:text-3xl text-[#FFF5E4] bg-[#BD4B4B] rounded-full" onClick={() => fetchMoreMakeup()}>
+              <FaArrowDown />
+            </button>
+            <hr className="self-center w-full border-b border-[#BD4B4B]" />
           </div>
         </div>
       </Layout>
