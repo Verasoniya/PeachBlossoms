@@ -16,7 +16,7 @@ function CardProduct({ productImage, productName, productBrand, productPrice, pr
         <p className="font-semibold text-md text-neutral-900">{productName}</p>
         <p className="font-semibold text-md text-neutral-900">from: {productBrand}</p>
         <p className="font-semibold text-md text-neutral-900">{productPrice} $</p>
-        <p className="font-normal text-xs text-neutral-900">category: {productCategory}</p>
+        <p className="font-normal text-xs text-neutral-900 pb-2">category: {productCategory}</p>
       </div>
     </div>
   );

@@ -31,7 +31,7 @@ function Home() {
     axios
       .get(`http://makeup-api.herokuapp.com/api/v1/products.json`)
       .then((res) => {
-        const { data } = res.data;
+        const data = res.data.slice(page, newPage);
         const temp = makeup.slice();
         temp.push(...data);
         setMakeup(temp);
