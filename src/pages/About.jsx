@@ -10,8 +10,8 @@ function About() {
           imageSrcAbout="https://drive.google.com/uc?export=view&id=1V6t3lUbySQXN3juvf4-5ScanyKu6xpnX"
           imageAltAbout="About Section"
           titleAbout="About Peach Blossoms Project"
-          descriptionAbout1="This project is a website to display makeup data from the MAKEUP API. There are various brands of makeup displayed."
-          descriptionAbout2="This project in addition to displaying a list of makeup that is in the MAKEUP API also has a makeup search feature by brand name. This website is built using React JS, Tailwind CSS, Font Awesome, Axios. Photo assets taken from Pexels. Logo made with Coreldraw."
+          descriptionAbout1="This project is a website to display cosmetics data from the MAKEUP API. There are various brands of cosmetics displayed."
+          descriptionAbout2="This project in addition to displaying a list of cosmetics that is in the MAKEUP API also has a cosmetics search feature by brand name. This website is built using React JS, Tailwind CSS, Font Awesome, Axios. Photo assets taken from Pexels. Logo made with Coreldraw."
         />
         <div className="w-10/12 self-center py-10 lg:py-20">
           <img src="https://drive.google.com/uc?export=view&id=18NGsf0TQmfZ-yp3EXyWLba2fho-UxG1v" alt="Peach Blossoms" />

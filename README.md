@@ -4,7 +4,7 @@
 
 # Peach Blossoms
 
-<strong>This project is a website to display makeup data from the <a href="https://makeup-api.herokuapp.com/">MAKEUP API</a>. There are various brands of makeup displayed.</strong>
+<strong>This project is a website to display cosmetics data from the <a href="https://makeup-api.herokuapp.com/">MAKEUP API</a>. There are various brands of cosmetics displayed.</strong>
 
 </div>
 <br>
@@ -12,9 +12,9 @@
 ## See the Feature and UI Design of this project:
 
 - Home Page <br>
-  Users can see the page header and a list of makeup brands below. Users can also search for makeup based on the name of the makeup brand by entering keywords into the input text in the page header section.
+  Users can see the page header and a list of cosmetics brands below. Users can also search for cosmetics based on the name of the cosmetics brand by entering keywords into the input text in the page header section.
 
-  <img src="https://drive.google.com/uc?export=view&id=1DH4L2Dp_6nynng3oJ3oUAwaJbAtW-MP3" alt="Home Page"/>
+  <img src="https://drive.google.com/uc?export=view&id=1Z9Ga6TZTS6Z55TH-9f5YAc2ekPb4ycn2" alt="Home Page"/>
 
 - Product Page<br>
   The product list is under the page header section on the homepage.
