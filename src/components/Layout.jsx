@@ -6,7 +6,7 @@ function Layout(props) {
   return (
     <>
       <Header />
-      <div className="min-h-screen">{props.children}</div>
+      <div className="min-h-screen bg-[#FFF5E4]">{props.children}</div>
       <Footer />
     </>
   );

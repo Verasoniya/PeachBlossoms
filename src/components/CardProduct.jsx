@@ -2,7 +2,7 @@ import React from "react";
 
 function CardProduct({ productImage, productName, productBrand, productPrice, productCategory }) {
   return (
-    <div className="flex flex-col gap-4 mb-8 shadow justify-between cursor-pointer">
+    <div className="flex flex-col gap-4 mb-8 shadow justify-between cursor-pointer bg-[#fdfdfd]">
       <img
         src={productImage}
         alt={productName}
@@ -13,10 +13,10 @@ function CardProduct({ productImage, productName, productBrand, productPrice, pr
         }}
       />
       <div className="flex flex-col px-1 font-gill-sans-mt">
-        <p className="font-semibold text-md text-neutral-900">{productName}</p>
-        <p className="font-semibold text-md text-neutral-900">from: {productBrand}</p>
-        <p className="font-semibold text-md text-neutral-900">{productPrice} $</p>
-        <p className="font-normal text-xs text-neutral-900 pb-2">category: {productCategory}</p>
+        <p className="font-semibold text-md text-[#1B1C1E]">{productName}</p>
+        <p className="font-semibold text-md text-[#1B1C1E]">from: {productBrand}</p>
+        <p className="font-semibold text-md text-[#1B1C1E]">{productPrice} $</p>
+        <p className="font-normal text-xs text-[#1B1C1E] pb-2">category: {productCategory}</p>
       </div>
     </div>
   );

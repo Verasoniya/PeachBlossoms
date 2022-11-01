@@ -1,8 +1,70 @@
-# Getting Started with Create React App
+<div align="center">
+    <br>
+        <img src="https://drive.google.com/uc?export=view&id=18NGsf0TQmfZ-yp3EXyWLba2fho-UxG1v" alt="Peach Blossoms" width="200px"/>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Peach Blossoms
 
-## Available Scripts
+<strong>This project is a website to display makeup data from the <a href="https://makeup-api.herokuapp.com/">MAKEUP API</a>. There are various brands of makeup displayed.</strong>
+
+</div>
+<br>
+
+## See the Feature and UI Design of this project:
+
+- Home Page <br>
+  Users can see the page header and a list of makeup brands below. Users can also search for makeup based on the name of the makeup brand by entering keywords into the input text in the page header section.
+
+  <img src="https://drive.google.com/uc?export=view&id=1DH4L2Dp_6nynng3oJ3oUAwaJbAtW-MP3" alt="Home Page"/>
+
+- Product Page<br>
+  The product list is under the page header section on the homepage.
+
+  <img src="https://drive.google.com/uc?export=view&id=1sE7NZc-g89pR9Y1A2_ih-5o2gfR-VBB-" alt="Product Page"/>
+
+- About Page<br>
+  This page displays information about this website.
+
+  <img src="https://drive.google.com/uc?export=view&id=1q2Ygr2Ay7rJmlp-gKDdT56p_SIx0jrb6" alt="About Page"/>
+
+<br>
+<br>
+
+## Language and Tools
+
+<div>
+    <a href="https://reactjs.org/">
+    <img src="https://drive.google.com/uc?export=view&id=1DMqkFq0deeshUptQYcT6gWuCRgCO1ecD" title="React JS" alt="React JS" width="40"/>
+    </a>&nbsp;
+    <a href="https://www.javascript.com/">
+    <img src="https://drive.google.com/uc?export=view&id=1sYi_QrPDZEsF_1-5eQNRa84YFkcA_Qmi" title="Javascript" alt="Javascript" width="40"/>
+    </a>&nbsp;
+    <a href="https://www.w3schools.com/html/">
+    <img src="https://drive.google.com/uc?export=view&id=1XPJKzToBlrQmMSff1NDoSCftzk0QQEJV" title="HTML 5" alt="HTML 5" width="40"/></a>&nbsp;
+    <a href="https://tailwindcss.com/">
+    <img src="https://drive.google.com/uc?export=view&id=16JDQ5g9o2tpjaVNMhDQ3bq_pXlQ88Dmh" title="Tailwind CSS" alt="Tailwind CSS" width="40"/></a>&nbsp;
+    <a href="https://sweetalert.js.org/">
+    <img src="https://drive.google.com/uc?export=view&id=1ZomJX54kvjRHtbLvBlX3lgkB5ajwJhZQ" title="Sweet Alert" alt="Sweet Alert" height="20"/></a>&nbsp;
+    <a href="https://code.visualstudio.com/">
+    <img src="https://drive.google.com/uc?export=view&id=1z9m4T_AYh_1O2qSCWdNn7-TmplDBgink" title="Visual Studio" alt="Visual Studio" width="40"/></a>&nbsp;
+    <a href="https://www.coreldraw.com/en/">
+    <img src="https://drive.google.com/uc?export=view&id=1ncsn0Zo60LKYYmWblhe5JO8h1pb6qw2P" title="Corel Draw" alt="Corel Draw" width="40"/></a>&nbsp;
+    <a href="https://vercel.com/">
+    <img src="https://drive.google.com/uc?export=view&id=1i3h9awG8PtKshjU2Jsv1CBns4A32Pn8C" title="Vercel" alt="Vercel" width="40"/></a>&nbsp;
+    <a href="https://fontawesome.com/">
+    <img src="https://drive.google.com/uc?export=view&id=1Gw_F2roJLQG0bDQhz1s8Do6QbAVOTdDB" title="Fontawesome" alt="Font Awesome" width="40"/></a>&nbsp;
+    <a href="https://www.pexels.com/">
+    <img src="https://drive.google.com/uc?export=view&id=1m2kYibR6oOEXBINfz8O-22Km_n8a_8NB" title="Pexels" alt="Pexels" width="40"/></a>&nbsp;
+</div>
+<br>
+<br>
+
+<!-- ## Deployment
+
+This project deployed in Vercel:
+<br>
+<br> -->
+
+## Deploy on Local
 
 In the project directory, you can run:
 
@@ -11,60 +73,27 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<br>
 
-### `npm test`
+### About Me :
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<table>
+  <tbody>
+    <tr>
+      <td align="center">
+        <img src="https://avatars.githubusercontent.com/u/105417025?v=4?s=100" width="100px;" alt="Septi Vera Soniya"/>
+        </td>
+        <td>
+            <sub><b>Septi Vera Soniya</b></sub>
+          <br>      
+          <br>      
+        <a href="https://github.com/Verasoniya">
+          <img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/github/github-original-wordmark.svg" alt="Github - Septi Vera Soniya" width="40"/>
+        </a>&nbsp;
+        <a href="https://linkedin.com/in/septi-vera-soniya-737731246/">
+          <img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/linkedin/linkedin-original.svg" title="Linked In" alt="Linked In - Septi Vera Soniya" width="40"/>
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
