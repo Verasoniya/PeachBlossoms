@@ -1,9 +1,11 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { FaArrowDown, FaSearch } from "react-icons/fa";
-import swal from "sweetalert";
+import Swal from "sweetalert2";
 import CardProduct from "../components/CardProduct";
 import Layout from "../components/Layout";
+import Logo from "../assets/pb-pink-a.png";
+import ImageHeader from "../assets/peach-blossoms.png";
 
 function Home() {
   const [loading, setLoading] = useState(true);
@@ -22,12 +24,21 @@ function Home() {
         setMakeup(res.data.slice(0, 12));
         console.log(res.data);
       })
-      .catch((err) => swal("Error", err.toString(), "success"))
+      .catch((err) => Swal.fire("Oops..!", err.toString(), "error"))
       .finally(() => setLoading(false));
   };
 
   const fetchMoreMakeup = async () => {
     let newPage = page + 12;
+    Swal.fire({
+      title: "Please Wait !",
+      imageUrl: `${Logo}`,
+      imageWidth: 100,
+      allowOutsideClick: false,
+      didOpen: () => {
+        Swal.showLoading();
+      },
+    });
     axios
       .get(`http://makeup-api.herokuapp.com/api/v1/products.json`)
       .then((res) => {
@@ -37,8 +48,8 @@ function Home() {
         setMakeup(temp);
         setPage(newPage);
       })
-      .catch((err) => swal("Error", err.toString(), "success"))
-      .finally(() => setLoading(false));
+      .catch((err) => Swal.fire("Oops..!", err.toString(), "error"))
+      .finally(() => Swal.close());
   };
 
   function handleSearch() {
@@ -49,7 +60,7 @@ function Home() {
         setMakeup(res.data);
         console.log(res);
       })
-      .catch((err) => swal("Error", err.toString(), "success"))
+      .catch((err) => Swal.fire("Oops..!", err.toString(), "error"))
       .finally(() => setLoading(false));
   }
 
@@ -57,7 +68,7 @@ function Home() {
     return (
       <div className="flex justify-center content-center">
         <div className="flex flex-col h-screen justify-center ">
-          <img src="https://drive.google.com/uc?export=view&id=1nFuchebMp6cdtV-7zYSuz1ED0eurOP90" alt="Index Image" className="w-48 animate-pulse" />
+          <img src={Logo} alt="Index Image" className="w-48 animate-pulse" />
         </div>
       </div>
     );
@@ -80,7 +91,7 @@ function Home() {
           </div>
           <div className="flex justify-center bg-[#FF9494]">
             <div className="w-10/12 flex flex-col lg:flex-row justify-between pt-10 pb-14">
-              <img src="https://drive.google.com/uc?export=view&id=1_Sa5MZiKJmGHBLH4BYRMjymbtOIe1S5n" alt="Index Image" className="w-full lg:w-1/2 mb-6 lg:mb-0" />
+              <img src={ImageHeader} alt="Image Header" className="w-full lg:w-1/2 mb-6 lg:mb-0" />
               <div className="w-full lg:w-1/3 h-auto self-center flex flex-col font-gill-sans-mt text-right text-[#FFF5E4]">
                 <p className="font-bold text-5xl">Peach Blossoms</p>
                 <p className="text-sm -mt-1">Online Cosmetics list</p>
@@ -93,9 +104,11 @@ function Home() {
               </div>
             </div>
           </div>
-          <div className="flex justify-center">
+          <div className="flex justify-center w-full">
             <div className="w-10/12 flex flex-col justify-center items-center">
-              <p className="py-20 font-gill-sans-mt font-bold text-4xl text-[#BD4B4B]">PRODUCTS LIST</p>
+              <p className="py-20 font-gill-sans-mt font-bold text-4xl text-[#BD4B4B]" id="product">
+                PRODUCTS LIST
+              </p>
               <div className="w-full mb-24 grid grid-flow-row auto-rows-max gap-6 my-8 mx-10 lg:mx-28 grid-cols-1 md:grid-cols-4 2xl:grid-cols-6 content-center">
                 {makeup.map((item) => (
                   <CardProduct key={item.id} productImage={item.image_link} productName={item.name} productBrand={item.brand} productPrice={item.price} productCategory={item.category} />

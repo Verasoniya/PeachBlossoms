@@ -1,21 +1,9 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Header() {
   const [navbar, setNavbar] = useState(false);
   return (
-    // <div className="  py-4 ">
-    //   <div className=" flex justify-between">
-    //     <div className="w-1/2">
-    //
-    //     </div>
-    //     <div className="w-1/2 flex justify-between ">
-    //
-    //
-    //
-    //     </div>
-    //   </div>
-    // </div>
-
     <nav className="w-full bg-[#FF9494] border-b border-[#FFF5E4] sticky top-0 px-2">
       <div className="w-10/12 justify-between mx-auto md:items-center md:flex">
         <div>
@@ -46,19 +34,19 @@ function Header() {
           <div className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? "block" : "hidden"}`}>
             <ul className="items-center justify-center space-y-8 md:flex md:space-x-24 md:space-y-0 font-gill-sans-mt font-bold text-xl text-[#FFF5E4] self-center">
               <li>
-                <a href="#" className="hover:text-[#BD4B4B]">
+                <Link to="/" className="hover:text-[#BD4B4B]">
                   HOME
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-[#BD4B4B]">
+                <Link to="/home#product" className="hover:text-[#BD4B4B]">
                   PRODUCT
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-[#BD4B4B]">
+                <Link to="/about" className="hover:text-[#BD4B4B]">
                   ABOUT
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
